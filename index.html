@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記帳士考試資源整合入口</title>
+    <style>
+        /* 延續深色模式設定 */
+        :root {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --container-bg: #1e1e1e;
+            --border-color: #444444;
+            --button-bg: #2980b9;
+            --button-hover: #3498db;
+            --card-bg: #2d2d2d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: var(--text-color);
+        }
+
+        /* 網格排版：電腦版顯示兩排，手機版自動變一排 */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* 卡片式按鈕設計 */
+        .nav-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 150px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+            background-color: var(--button-bg);
+            border-color: var(--button-hover);
+            color: white;
+        }
+
+        .nav-card h2 {
+            margin: 0;
+            font-size: 26px;
+        }
+
+        .sub-text {
+            font-size: 20px;
+            font-weight: normal;
+            margin-top: 15px;
+            display: block;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>記帳士考試資源整合入口</h1>
+
+    <div class="grid-container">
+        <a href="https://wu0205n.github.io/ExamViewer_Bookkeeping/" target="_blank" class="nav-card">
+            <h2>記帳相關法規概要<span class="sub-text">歷屆題目查詢</span></h2>
+        </a>
+
+        <a href="https://wu0205n.github.io/law_search_Bookkeeping/" target="_blank" class="nav-card">
+            <h2>記帳相關法規概要<span class="sub-text">法規查詢</span></h2>
+        </a>
+
+        <a href="https://wu0205n.github.io/ExamViewer_Tax/" target="_blank" class="nav-card">
+            <h2>稅務相關法規概要<span class="sub-text">歷屆題目查詢</span></h2>
+        </a>
+
+        <a href="https://wu0205n.github.io/Law_Search_Tax/" target="_blank" class="nav-card">
+            <h2>稅務相關法規概要<span class="sub-text">法規查詢</span></h2>
+        </a>
+    </div>
+
+</body>
+</html>
