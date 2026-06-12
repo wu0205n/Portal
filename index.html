@@ -6,14 +6,15 @@
     <title>記帳士考試資源整合入口</title>
     <style>
         :root {
-            --bg-color: #121212;
-            --text-color: #e0e0e0;
-            --border-color: #444444;
-            --header-bg: #1f1f1f;
-            --card-bg: #222222;
-            --item-bg: #2d2d2d;
-            --primary-color: #2980b9;
-            --primary-hover: #3498db;
+            /* 採用深邃暗色系與高對比文字 */
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --border-color: #30363d;
+            --header-bg: #161b22;
+            --card-bg: #0d1117;
+            --item-bg: #21262d;
+            --primary-color: #58a6ff;
+            --primary-hover: #1f6feb;
         }
 
         body {
@@ -32,33 +33,31 @@
             font-size: 32px;
             color: #ffffff;
             letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
         }
 
-        /* 網格排版：模擬圖片中的對齊與欄位結構 */
         .layout-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
-            background-color: var(--card-bg);
+            background-color: var(--header-bg);
             padding: 25px;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
             border: 1px solid var(--border-color);
         }
 
-        /* 純文字標題設計 */
         .header-text {
             font-size: 22px;
             font-weight: 600;
             text-align: center;
-            color: #ffffff;
-            background-color: var(--header-bg);
+            color: var(--primary-color);
+            background-color: var(--card-bg);
             padding: 15px;
             border-radius: 8px;
             border: 1px solid var(--border-color);
         }
 
-        /* 連結按鈕設計 */
         .link-card {
             background-color: var(--item-bg);
             border: 1px solid var(--border-color);
@@ -76,19 +75,17 @@
         }
 
         .link-card:hover {
-            background-color: var(--primary-color);
-            border-color: var(--primary-hover);
+            background-color: var(--primary-hover);
+            border-color: var(--primary-color);
             color: #ffffff;
             transform: translateY(-4px);
-            box-shadow: 0 6px 15px rgba(41, 128, 185, 0.4);
+            box-shadow: 0 6px 15px rgba(31, 111, 235, 0.3);
         }
 
-        /* 隱藏空缺的網格區域保持版面平衡 */
         .empty-slot {
             visibility: hidden;
         }
 
-        /* 手機版排版微調，保留雙欄但縮小間距與字體 */
         @media (max-width: 600px) {
             .layout-container {
                 padding: 15px;
